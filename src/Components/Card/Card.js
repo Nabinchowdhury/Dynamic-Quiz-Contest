@@ -6,6 +6,7 @@ const Card = ({ data }) => {
     const navigate = useNavigate()
     const navigateRoute = () => {
         navigate(`/quiz/${id}`)
+        console.log(`/quiz/${id}`)
     }
     return (
         <div className="card card-compact w-auto bg-base-100 shadow-xl mx-5 ">

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Home from "../Home/Home";
 import Main from "../Layout/Main";
+import QuizContest from "../QuizContest/QuizContest";
 
 export const router = createBrowserRouter([
     {
@@ -31,9 +32,9 @@ export const router = createBrowserRouter([
             {
                 path: "/quiz/:id",
                 loader: ({ params }) => {
-                    return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}}`)
+                    return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
                 },
-                element: <h3>id</h3>,
+                element: <QuizContest></QuizContest>,
             },
         ]
     }
