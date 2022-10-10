@@ -6,9 +6,9 @@ const Header = () => {
         <div className='flex justify-between px-32 py-5 md: flex-col lg:flex-row font-bold'>
 
 
-            <h1 className='text-5xl'>Dynamic Quiz Contest</h1>
+            <h1 className='text-5xl text-lime-600'>Dynamic Quiz Contest</h1>
 
-            <div className='text-xl '>
+            <div className=' flex flex-col text-xl mt-5  lg:flex-row lg:mt-0'>
                 <NavLink to="/home" className={({ isActive }) =>
                     isActive ? "text-blue-500 underline pl-5" : "text-black pl-5"
                 }>Home</NavLink>
