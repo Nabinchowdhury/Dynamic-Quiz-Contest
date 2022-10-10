@@ -7,9 +7,9 @@ const QuizContest = () => {
     const { id, name, questions } = data
     let count = 0;
     return (
-        <div>
-            <h3 className='text-2xl mx-20 font-bold text-purple-600 mt-10'>Quiz Topic: {name}</h3>
-            <div>
+        <div className='my-'>
+            <h3 className='text-2xl mx-auto font-bold text-purple-600 mt-10'>Quiz Topic: {name}</h3>
+            <div className='mt-10'>
                 {
                     questions.map(question => {
                         count += 1;
