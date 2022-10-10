@@ -7,8 +7,8 @@ const Home = () => {
     return (
 
         <div className='mt-24'>
-            <h1 className='text-4xl mx-24 font-bold text-rose-400 underline'>Participate our contests to test your knowledge</h1>
-            <div className='grid grid-cols-1 gap-4 m-24 md:grid-cols-2 lg:grid-cols-3'>
+            <h1 className='text-4xl mx-20 font-bold text-rose-400 underline'>Participate our contests to test your knowledge</h1>
+            <div className='grid grid-cols-1 gap-4 mx-24 my-10 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     datas.map(data => <Card data={data}></Card>)
                 }
