@@ -3,6 +3,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import Home from "../Home/Home";
 import Main from "../Layout/Main";
 import QuizContest from "../QuizContest/QuizContest";
+import Statistics from "../Statistics/Statistics";
 
 export const router = createBrowserRouter([
     {
@@ -23,7 +24,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/statistics",
-                element: <h1>stats</h1>,
+                element: <Statistics></Statistics>,
             },
             {
                 path: "/blog",
