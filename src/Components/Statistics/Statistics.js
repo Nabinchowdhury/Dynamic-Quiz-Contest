@@ -6,7 +6,7 @@ const Statistics = () => {
     const data = useContext(apiContext)
     // console.log(data)
     return (
-        <div className='my-10 flex flex-col justify-evenly  lg:flex-row '>
+        <div className='my-24 flex flex-col justify-evenly  lg:flex-row '>
 
             <BarChart
                 width={500}

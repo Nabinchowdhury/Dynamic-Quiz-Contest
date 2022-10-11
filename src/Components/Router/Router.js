@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Blog from "../Blog/Blog";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Home from "../Home/Home";
 import Main from "../Layout/Main";
@@ -28,7 +29,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/blog",
-                element: <h3>blog</h3>,
+                element: <Blog></Blog>,
             },
             {
                 path: "/quiz/:id",
