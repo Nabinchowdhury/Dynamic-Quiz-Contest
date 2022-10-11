@@ -1,7 +1,7 @@
 import React, { createContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
