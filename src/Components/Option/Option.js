@@ -4,7 +4,6 @@ import { toastContext } from '../QuizContest/QuizContest';
 
 const Option = ({ option, count, correctAnswer }) => {
     const toastFunc = useContext(toastContext)
-    // console.log(toastFunc)
     return (
         <div className='rounded mx-5 text-xl bg-slate-200 p-2' >
             <input type="radio" id={option} name={count} value={option} onClick={(e) => toastFunc(e.target.value, correctAnswer)} />

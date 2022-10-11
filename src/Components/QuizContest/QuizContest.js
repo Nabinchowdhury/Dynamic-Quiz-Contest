@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
 import { toast } from 'react-toastify';
@@ -10,6 +10,7 @@ export const toastContext = createContext()
 const QuizContest = () => {
     const { data } = useLoaderData()
     const { id, name, questions } = data
+
 
 
     const showToastMessage = (selected, correct) => {
