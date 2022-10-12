@@ -8,8 +8,12 @@ Steps: required for the project-
     • Different components, route paths (static, dynamic) are made for handling the project clearly and to keep code clean.  Also used Context to get data without props drilling.
     • Home contents and Statistics route are showed to the UI by using Context API.
     • HeroIcon, Recharts are used.
-    • Conditional rendering and condition css are also used in `/quiz/${id}` route (QuizContest Component).
+    • Conditional rendering and condition css are also used.
     • This Project is Responsive with mobile, laptop devices.
+    • This project sets theme with users theme preference.
+    • You can choose different quiz contest and participate.
+    • Quiz marks will be shown in a modal.
+    
     
 
     Thank You...
