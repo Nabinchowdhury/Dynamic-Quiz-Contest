@@ -18,21 +18,23 @@ const QuizContest = () => {
     const [wrongs, setWrong] = useState([])
 
     const showToastMessage = (selected, correct, question) => {
-        if (selected === correct) {
+        if (selected.value === correct) {
+            selected.parentNode.className = "rounded mx-5 text-xl bg-green-500  p-2 text-gray-900"
             toast.success('Good job! Correct Answer .', {
                 position: toast.POSITION.TOP_CENTER
             });
-            checkRight(question, selected)
+            checkRight(question)
         }
         else {
+            selected.parentNode.className = "rounded mx-5 text-xl bg-red-500  p-2 text-gray-900"
             toast.error('Ops! Wrong Answer.', {
                 position: toast.POSITION.TOP_CENTER
             });
-            checkWrong(question, selected)
+            checkWrong(question)
         }
 
     };
-    const checkRight = (selectedQuestion, selectedAnswer) => {
+    const checkRight = (selectedQuestion) => {
 
         let rightArray = []
 
@@ -46,7 +48,7 @@ const QuizContest = () => {
             }
         }
     }
-    const checkWrong = (selectedQuestion, selectedAnswer) => {
+    const checkWrong = (selectedQuestion) => {
         let wrongArray = []
         const existsWrong = wrongs.find(wrong => wrong === selectedQuestion)
         if (!existsWrong) {
@@ -75,7 +77,7 @@ const QuizContest = () => {
                     }
                 </div>
 
-                <label htmlFor="my-modal-6" className="btn modal-button px-10 my-10 bg-blue-500 hover:bg-blue-700 border-0">Submit</label>
+                <label htmlFor="my-modal-6" className="btn modal-button px-10 my-10 bg-blue-500 hover:bg-blue-700 border-0 text-white">Submit</label>
             </div>
         </toastContext.Provider>
     );

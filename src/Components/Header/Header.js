@@ -10,13 +10,13 @@ const Header = () => {
 
             <div className=' flex flex-col text-xl mt-5  lg:flex-row lg:mt-0'>
                 <NavLink to="/home" className={({ isActive }) =>
-                    isActive ? "text-blue-500 underline pl-5" : "text-black pl-5"
+                    isActive ? "text-blue-500 underline pl-5" : "text-blue-500 pl-5"
                 }>Home</NavLink>
                 <NavLink to="/statistics" className={({ isActive }) =>
-                    isActive ? "text-blue-500 underline pl-5" : "text-black pl-5"
+                    isActive ? "text-blue-500 underline pl-5" : "text-blue-500 pl-5"
                 }>Statastics</NavLink>
                 <NavLink to="/blog" className={({ isActive }) =>
-                    isActive ? "text-blue-500 underline pl-5" : "text-black pl-5"
+                    isActive ? "text-blue-500 underline pl-5" : "text-blue-500 pl-5"
                 }>Blog</NavLink>
             </div>
         </div >

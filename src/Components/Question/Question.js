@@ -11,7 +11,7 @@ const Question = (quiz) => {
     return (
         <div className='w-3/4 mx-auto rounded-lg bg-slate-50  mt-5 py-5'>
             <div className='flex justify-evenly items-center'>
-                <h4 className='text-xl font-600 w-3/4'>Quiz {count}: {question}</h4>
+                <h4 className='text-xl font-600 w-3/4 text-gray-700'>Quiz {count}: {question}</h4>
                 {
                     show ? <EyeIcon className="h-6 w-6 text-blue-400 hover:text-blue-700 cursor-pointer" onClick={() => setShow(!show)}></EyeIcon> :
                         <EyeSlashIcon className='h-6 w-6 text-blue-400 hover:text-blue-700 cursor-pointer' onClick={() => setShow(!show)} ></EyeSlashIcon>
