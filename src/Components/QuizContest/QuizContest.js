@@ -3,33 +3,67 @@ import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Modal from '../Modal/Modal';
 
 
 export const toastContext = createContext()
 
 const QuizContest = () => {
+
+
     const { data } = useLoaderData()
-    const { id, name, questions } = data
+    const { name, questions } = data
 
+    const [rights, setRight] = useState([])
+    const [wrongs, setWrong] = useState([])
 
-
-    const showToastMessage = (selected, correct) => {
-
+    const showToastMessage = (selected, correct, question) => {
         if (selected === correct) {
             toast.success('Good job! Correct Answer .', {
                 position: toast.POSITION.TOP_CENTER
             });
+            checkRight(question, selected)
         }
         else {
             toast.error('Ops! Wrong Answer.', {
                 position: toast.POSITION.TOP_CENTER
             });
+            checkWrong(question, selected)
         }
+
     };
+    const checkRight = (selectedQuestion, selectedAnswer) => {
+
+        let rightArray = []
+
+        const existsRight = rights.find(right => right === selectedQuestion)
+        if (!existsRight) {
+            rightArray.push(...rights, selectedQuestion)
+            setRight(rightArray)
+            const restWrong = wrongs.filter(wrong => wrong !== selectedQuestion)
+            if (restWrong) {
+                setWrong(restWrong)
+            }
+        }
+    }
+    const checkWrong = (selectedQuestion, selectedAnswer) => {
+        let wrongArray = []
+        const existsWrong = wrongs.find(wrong => wrong === selectedQuestion)
+        if (!existsWrong) {
+            wrongArray.push(...wrongs, selectedQuestion)
+            setWrong(wrongArray)
+            const restRight = rights.filter(right => right !== selectedQuestion)
+            if (restRight) {
+
+                setRight(restRight)
+            }
+        }
+    }
 
     let count = 0;
     return (
         <toastContext.Provider value={showToastMessage}>
+            <Modal rights={rights} wrongs={wrongs} total={questions}></Modal>
             <div className='my-5'>
                 <h3 className='text-2xl mx-auto font-bold text-purple-600 mt-10'>Quiz Topic: {name}</h3>
                 <div className='mt-10'>
@@ -40,7 +74,9 @@ const QuizContest = () => {
                         })
                     }
                 </div>
-            </div >
+
+                <label htmlFor="my-modal-6" className="btn modal-button px-10 my-10 bg-blue-500 hover:bg-blue-700 border-0">Submit</label>
+            </div>
         </toastContext.Provider>
     );
 };
