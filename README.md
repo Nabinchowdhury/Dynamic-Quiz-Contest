@@ -2,6 +2,8 @@ Project name: Dynamic Quiz Contest.
 
 Live Website Link: https://incomparable-churros-46fa21.netlify.app/
 
+Github repository Link: https://github.com/Nabinchowdhury/Dynamic-Quiz-Contest
+
 Steps: required for the project-
 
     • At the very first, I installed all the dependecies such as tailwind, daisyUI, react-router-dom etc.
